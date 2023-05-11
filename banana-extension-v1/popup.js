@@ -20,7 +20,7 @@ extpay.getUser().then(user => {
 
       if (variable) {
         document.querySelector('p').innerHTML = 'You are ready! '
-        document.querySelector('button').remove()
+        document.querySelector('button').innerHTML = 'Profile'
   
         uploadingPdfButton.style.display = 'block';
         pdfOutcomeDiv.style.display = 'block';
