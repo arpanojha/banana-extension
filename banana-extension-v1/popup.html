@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    </head>
+    <head>
+        <style>
+          body {
+            background-image: url("banner.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top;
+            color: black;
+            font-size: 24px;
+           
+          }
+        </style>
+      </head>
+      <head>
+        <style>
+          header {
+            background-image: url("backgroundcolor.png");
+            background-size: contain; /* Adjust the background size as needed */
+            background-repeat: no-repeat;
+            background-position: top;
+            text-align: left; /* Align the content in the center */
+            color:grey; /* Set the text color for better visibility */
+            margin-top: 50px;/* Add padding for better spacing */
+          }
+        </style>
+      </head>
+       
+
+    <body>
+        <header>
+            <h1 style="font-size: 1.2rem;width: 400px;font-weight: bold;padding-top: 90px;padding-left: 30px;">Talk to 1000+ Page PDFS</h1>
+            <h1 style="font-size: .9rem;width: 350px;font-weight: normal;padding-left: 32px;">Go to a PDF page on google, then hit the Get started. AI will read you entire page. Then you can ask the page questions only it would know so you dont have to read it!</h1>
+            <p style="font-size: 1.2rem;width: 400px;font-weight: bold;padding-left: 30px;">Start Your Free Trial!</p>
+            <button style="margin-left: 30px;background-color:#dfc200;border-color: #dfc200;">Get Started</button>
+        
+        <script src="ExtPay.js"></script>
+        <script src="popup.js"></script>
+        <script src="script.js"></script>
+        
+         
+            
+        
+            <form id="input-form" style="display: none;">
+            <input type="button" value="Read PDF" id="uploading-pdf" style="display: none;">
+            <div id="pdfoutcome" style="display: none;"></div>
+            <label for="input-text">Ask It A Question Here:</label><br>
+            <textarea id="input-text" name="input-text" rows="5" cols="50"></textarea><br>
+            <input type="button" value="Submit" id="submit-button">
+            </form>
+            <div id="output" style="display: none;"></div>
+            <div id="webgoeshere" style="display: none;"></div>
+        </header>
+  </head>
+
+</html>
