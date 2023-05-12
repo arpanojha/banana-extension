@@ -39,8 +39,10 @@
         <header>
             <h1 style="font-size: 1.2rem;width: 400px;font-weight: bold;padding-top: 90px;padding-left: 30px;">Talk to 1000+ Page PDFS</h1>
             <h1 style="font-size: .9rem;width: 350px;font-weight: normal;padding-left: 32px;">Go to a PDF page on google, then hit the Get started. AI will read you entire page. Then you can ask the page questions only it would know so you dont have to read it!</h1>
-            <p style="font-size: 1.2rem;width: 400px;;font-weight: bold;padding-left: 30px;">Start Your Free Trial!</p>
-            <button style="margin-left: 30px;background-color:#dfc200;border-color: #dfc200;">Get Started</button>
+            <p style="font-size: 1.2rem;width: 400px;;font-weight: bold;padding-left: 30px;">Donate plz School is Expensive</p>
+            <a style="font-size: .9rem;width: 350px;font-weight: normal;padding-left: 32px;margin-bottom: 20px;" href="https://checkout.square.site/merchant/ML1BHDZZSY5S3/checkout/V5NTIKJVRL2ATKTKO2HAT6UN"  target="_blank">Click Here For Donation</a>
+          
+            <button style="display:none;">Get Started</button>
         
         <script src="ExtPay.js"></script>
         <script src="popup.js"></script>
@@ -49,15 +51,15 @@
          
             
         
-            <form id="input-form" style="display: none;">
-            <input type="button" value="Read PDF" id="uploading-pdf" style="display: none;">
-            <div id="pdfoutcome" style="display: none;"></div>
-            <label for="input-text">Ask It A Question Here:</label><br>
-            <textarea id="input-text" name="input-text" rows="5" cols="50"></textarea><br>
-            <input type="button" value="Submit" id="submit-button">
+            <form id="input-form" >
+            <input type="button" value="Read PDF" id="uploading-pdf" style="margin-left: 15px;background-color:#dfc200;border-color: #dfc200; color:white">
+            <div style="margin-left: 15px;" id="pdfoutcome"></div>
+            <label style="margin-left: 15px;" for="input-text">Ask It A Question Here:</label><br>
+            <textarea style="margin-left: 15px;" id="input-text" name="input-text" rows="5" cols="50"></textarea><br>
+            <input type="button" value="Submit" id="submit-button" style="margin-left: 15px;background-color:#dfc200;border-color: #dfc200;color:white">
             </form>
-            <div id="output" style="display: none;"></div>
-            <div id="webgoeshere" style="display: none;"></div>
+            <div style="margin-left: 15px;" id="output" ></div>
+            <div id="webgoeshere" ></div>
         </header>
   </head>
 

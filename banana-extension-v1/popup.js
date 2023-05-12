@@ -19,21 +19,13 @@ extpay.getUser().then(user => {
       var webGoesHereDiv = document.getElementById('webgoeshere');
 
       if (variable) {
-        document.querySelector('p').innerHTML = 'You are ready! '
+        
         document.querySelector('button').innerHTML = 'Profile'
   
-        uploadingPdfButton.style.display = 'block';
-        pdfOutcomeDiv.style.display = 'block';
-        inputForm.style.display = 'block';
-        outputDiv.style.display = 'block';
-        webGoesHereDiv.style.display = 'block';
+       
       } else {
-        bananaBreadHeading.style.display = 'none';
-        uploadingPdfButton.style.display = 'none';
-        pdfOutcomeDiv.style.display = 'none';
-        inputForm.style.display = 'none';
-        outputDiv.style.display = 'none';
-        webGoesHereDiv.style.display = 'none';
+        document.querySelector('p').innerHTML = 'Sign Up! '
+        document.querySelector('button').innerHTML = 'Subscribe'
       }
     }
 
