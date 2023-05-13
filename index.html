@@ -2,15 +2,20 @@
 <html>
   
     <style>
+          html, body {
+      margin: 0;
+      padding: 0;
+    }
       body {
   
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
-    color: black;
+    color: #090909;
     font-size: 24px;
- 
+        font-family:system-ui;
       box-shadow: none;
+      
   
   }
   
@@ -23,6 +28,7 @@
     color: grey;
     margin-top: 50px;
     box-shadow: none;
+    font-family:sans-serif;
   }
       
     </style>
@@ -33,27 +39,29 @@
   </body>
     
   <head>
-    <img src="banner.jpg" style="width:450px;height: px;"; id="topshit">
+    <img src="banner.jpg" style="width:450px;"; id="topshit">
     <img src="backgroundcolor.png" style="width:450px;height: 140px;padding-top:10px;"; id="Description of the image">
     <h1 style="font-size: 1.2rem;width: 400px;font-weight: bold;padding-left: 50px;">Talk to 1000+ Page PDFS</h1>
     <h1 style="font-size: .9rem;width: 350px;font-weight: normal;padding-left: 52px;">Go to a PDF page on google, then hit the Get started. AI will read you entire page. Then you can ask the page questions only it would know so you dont have to read it!</h1>
+   
     <p style="font-size: 1.2rem;width: 400px;;font-weight: bold;padding-left: 50px;">Donate plz School is Expensive</p>
     <a style="font-size: .9rem;width: 350px;font-weight: normal;padding-left: 52px;padding-bottom: 20px;" href="https://checkout.square.site/merchant/ML1BHDZZSY5S3/checkout/V5NTIKJVRL2ATKTKO2HAT6UN"  target="_blank">Click Here For Donation</a>
-  
+
     
     
 
     <form>
-      <input type="button" value="upload-pdf" id="uploading-pdf" style="border: none;
-      outline: none;box-shadow: none;background: transparent;margin-top: 30px;border-radius: 30px;margin-left: 50px;background-color:#dfc200;border-color: #dfc200; color:white;padding-top: 2px;padding-bottom: 2px; padding-top: 7px;padding-bottom: 7px;margin-bottom: 10px">
-      <div style="margin-left: 50px;font-size: .9rem;width: 350px;font-weight: normal;padding-left: 32px " id="pdfoutcome"></div>
+      <input type="button" value="upload-pdf" id="uploading-pdf" style="border: none;align-self: center;
+      outline: none;box-shadow: none;background: transparent;margin-top: 30px;border-radius: 5px;margin-left: 50px;font-weight: 700;background-color:#dfc200;border-color: #dfc200; color:white;padding-top: 2px;padding-bottom: 2px; padding-top: 7px;padding-bottom: 7px;margin-bottom: 10px;width: 125px; height: 40px;">
+      
+      <div style="margin-left: 30px;font-size: .9rem;width: 350px;font-weight: normal;padding-left: 32px; width:300px " id="pdfoutcome"></div>
       <label style="margin-left: 50px;"  for="input-text">Ask Question:</label><br>
-      <textarea style="margin-left: 50px;width: 335px;" id="input-text" name="input-text" rows="5" cols="50"></textarea><br>
+      <textarea style="box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 10px;margin-left: 50px;width: 335px; margin-bottom: 5px;" id="input-text" name="input-text" rows="5" cols="50"></textarea><br>
       <input type="button" value="Submit" id="submit-button" style="border: none;
-      outline: none;margin-left: 50px;background-color:#dfc200;border-color: #dfc200;color:white;border-radius: 30px;padding-top: 7px;padding-bottom: 7px;">
+      outline: none;margin-left: 50px;font-weight: 700;background-color:#dfc200;border-color: #dfc200;color:white;border-radius: 5px;width: 125px; height: 40px;margin-bottom: 10px;">
     </form>
-    <div style="margin-left: 50px; font-size: .9rem;width: 350px;font-weight: normal;padding-left: 32px" id="output"></div>
-    <div style="margin-left: 50px;" id="webgoeshere"></div>
+    <div style="margin-left: 50px;font-size: .9rem;width: 350px;font-weight: normal;padding-left: 32px;margin-bottom: 10px" id="output"></div>
+    <div style="margin-left: 50px; margin-bottom: 10px" id="webgoeshere"></div>
     <script src="script.js"></script>
   </head>
  
