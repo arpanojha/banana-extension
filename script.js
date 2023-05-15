@@ -24,30 +24,37 @@ document.addEventListener('DOMContentLoaded', function() {
     // outputDiv.innerHTML = '<strong>Capitalized Text:</strong> ' + capitalizedText;
 
 });
-  var summitB = document.getElementById('uploading-pdf');
-  summitB.addEventListener('click',function(){
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      var currentTab = tabs[0];
-      var currentUrl = currentTab.url;
-      const fileUrl = currentUrl;
-      fetch(fileUrl)
+var summitB = document.getElementById('uploading-pdf');
+summitB.addEventListener('click', function() {
+  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+    var currentTab = tabs[0];
+    var currentUrl = currentTab.url;
+    const fileUrl = currentUrl;
+    fetch(fileUrl)
       .then(response => response.blob())
       .then(blob => {
+        // Check the file size before uploading
+        const fileSizeLimit = 25 * 1024 * 1024; // 25 MB in bytes
+        if (blob.size > fileSizeLimit) {
+          throw new Error('File size exceeds the limit of 25 MB');
+        }
+
         const formData = new FormData();
         formData.append('file', blob, 'example.pdf');
         const options = {
           method: 'POST',
           body: formData
-      };
-      return fetch('http://localhost:8000/uploadfile/', options);
-  })
+        };
+        return fetch('http://localhost:8000/uploadfile/', options);
+      })
       .then(response => response.json())
       .then(data => console.log(data))
       .catch(error => console.error(error));
-      var outputDiv = document.getElementById('pdfoutcome');
-      outputDiv.innerHTML = '<strong>Current Text:</strong> ' + currentUrl;
+    var outputDiv = document.getElementById('pdfoutcome');
+    outputDiv.innerHTML = '<strong>Current Text:</strong> ' + currentUrl;
   });
+});
     
 })
-});
+
 
