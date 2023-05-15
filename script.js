@@ -36,6 +36,8 @@ summitB.addEventListener('click', function() {
         // Check the file size before uploading
         const fileSizeLimit = 25 * 1024 * 1024; // 25 MB in bytes
         if (blob.size > fileSizeLimit) {
+          var outputDiv = document.getElementById('pdfoutcome');
+          outputDiv.innerHTML = '<strong>Current Text:</strong> ' + 'File exceeds the limit of 25 MB';
           throw new Error('File size exceeds the limit of 25 MB');
         }
 
