@@ -1,7 +1,18 @@
 var backend_url = 'http://banana-lb-1345717375.us-east-2.elb.amazonaws.com:8000/'
+//var backend_url = 'http://127.0.0.1:8000/'
+function generateRandomValue(length) {
+  let result = "";
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const charactersLength = characters.length;
 
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
 
+  return result;
+}
 
+const randomValue = generateRandomValue(16);
 
 document.addEventListener('DOMContentLoaded', function() {
   var donateButton = document.getElementById('donate');
@@ -61,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         })
         .then(() => {
-          const url = backend_url + 'send_me_url/?url=' + currentUrl;
+          const url = backend_url + 'send_me_url/'+randomValue+'/?url=' + currentUrl;
     
           fetch(url)
             .then(response => response.json())
