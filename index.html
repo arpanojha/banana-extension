@@ -5,16 +5,17 @@
           html, body {
       margin: 0;
       padding: 0;
-      
+      width: 400px;
+      background: linear-gradient(to bottom right, #494A4E, #45474B);
     }
       body {
-  
+        background-image: url("background.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
     color: #090909;
     font-size: 24px;
-        font-family:system-ui;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       box-shadow: none;
       
   
@@ -41,32 +42,38 @@
     
   <head>
    
-    <img src="backgroundcolor.png" style="width:450px;height: 140px;"; id="Description of the image">
-    <h1 style="font-size: 1.2rem;width: 400px;font-weight: bold;padding-left: 50px;">Talk to 1000+ Page PDFS</h1>
-    <h1 style="font-size: .9rem;width: 350px;font-weight: normal;padding-left: 52px;">Go to a PDF page on google, then hit the Get started. AI will read you entire page. Then you can ask the page questions only it would know so you dont have to read it!</h1>
-   
-    <p style="font-size: 1.2rem;width: 400px;;font-weight: bold;padding-left: 50px;">Donate plz School is Expensive</p>
-    <a style="font-size: .9rem;width: 350px;font-weight: normal;padding-left: 52px;color:#dfc200;" href="https://checkout.square.site/merchant/ML1BHDZZSY5S3/checkout/V5NTIKJVRL2ATKTKO2HAT6UN"  target="_blank">Click Here For Donation</a>
+    <img style="width:150px; align-self: center; margin-left: 130px; margin-top: 30px;" src="banner.png" alt="Image Description">
+    <div style="width: 320px;margin-left: 40px;background: linear-gradient(to bottom right, #3D3D40, #3B3C40);; border-radius: 30px;box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)">
+    <h1 style="line-height: normal;padding-top:10px;font-size: 1.2rem;margin-left: 20px;margin-right: 20px;width: 400px;font-weight: bold;color:white;">Talk To PDFS</h1>
+    <h1 style="padding-bottom:10px;margin-left: 20px;margin-right: 20px;font-size: .7rem;color:#B3B3B5;">Go to a PDF page on google, then hit the Get started. AI will read you entire page. Then you can ask the page questions only it would know so you dont have to read it!</h1>
+    </div>
 
-    
-    
-
-    <form style="padding-top: 30px;">
+    <button id="donate" style="border-width: 0px; box-shadow: none;margin-left:150px;border-radius: 50px;margin-top: 10px;margin-bottom: 10px; background: linear-gradient(to bottom right, #B3B3B5, #45474B);font-size: .9rem;width: 100px; height: 100px;font-weight: normal;color:white;text-decoration: none;box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)" href="https://checkout.square.site/merchant/ML1BHDZZSY5S3/checkout/V5NTIKJVRL2ATKTKO2HAT6UN"  target="_blank">
+      <div id="donatetext" style="font-size: 1.2rem;font-weight: bold;color:white; padding-top:  10px;text-align: center;">Donate</div>
       
-      <div style="margin-left: 30px;font-size: .9rem;max-width: 300px;white-space: nowrap;
+    </button>
+
+   
+    
+    
+
+    <form style="margin-bottom:40px;padding-bottom:10px;width: 320px;margin-left: 40px;background: linear-gradient(to bottom right, #3D3D40, #3B3C40);; border-radius: 30px;box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)">
+      
+      <div style="padding-top:10px;margin-left: 20px;font-size: .9rem;max-width: 300px;white-space: nowrap;
       overflow: hidden;color:grey;
       text-overflow: ellipsis;font-weight: normal;padding-left: 32px;  " id="pdfoutcome"></div>
-      <label style="margin-left: 50px;font-size: 1.2rem;width: 400px;;font-weight: bold;"  for="input-text">Ask Question:</label><br>
-      <textarea style="box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 10px; border-width: 2px;margin-left: 50px;width: 335px; margin-bottom: 5px;" id="input-text" name="input-text" rows="5" cols="50"></textarea><br>
+      <label style="padding-top:10px;margin-left: 20px;font-size: 1.2rem;font-weight: bold;color:white"  for="input-text">Ask Question:</label><br>
+      <textarea style="min-height:100px;color:white;background-color:#2A2127;border-color: #2A2127; border-radius: 30px;padding-left: 20px;padding-right: 10px; border-width: 2px;margin-left: 10px;max-width: 265px;min-width: 265px; margin-bottom: 5px;" id="input-text" name="input-text" rows="5" cols="50"></textarea><br>
       
       <input type="button" value="upload-pdf" id="uploading-pdf" style="border: none;align-self: center;
-      outline: none;box-shadow: none;background: transparent;border-radius: 5px;margin-left: 70px;font-weight: 700;background-color:black;border-color: black; color:white;padding-top: 2px;padding-bottom: 2px; padding-top: 7px;padding-bottom: 7px;margin-bottom: 10px;width: 125px; height: 40px;">
+      outline: none;box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);background: transparent;border-radius: 30px;margin-left: 30px;font-weight: 700;background-color:#FFD337;border-color: #FFD337; color:#3B3C40;padding-top: 2px;padding-bottom: 2px; padding-top: 7px;padding-bottom: 7px;margin-bottom: 10px;width: 125px; height: 40px;">
      <input type="button" value="Submit" id="submit-button" style="border: none;
-      outline: none;margin-left: 50px;font-weight: 700;background-color:black;border-color: black;color:white;border-radius: 5px;width: 125px; height: 40px;margin-bottom: 10px;">
-    </form>
-    <div style="margin-left: 52px;font-size: .9rem;width: 345px;font-weight: normal;margin-top: 10px;background-color:grey;border-color: grey;color:white;padding-top: 20;border-radius: 10px;" id="box">
-    <div style="font-size: .9rem;width:max-content 300;margin: 20px;;color:white;align-self: center;" id="output"></div></div>
+      outline: none;margin-left: 10px;font-weight: 700;box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);background-color:#FFD337;border-color: #FFD337;color:#3B3C40;border-radius: 30px;width: 125px; height: 40px;margin-bottom: 10px;">
+   
+    <div style="color:white;background-color:#2A2127;border-color: #2A2127;border-radius: 30px;padding-left: 20px;padding-right: 10px; border-width: 2px;margin-left: 10px;max-width: 265px; margin-bottom: 5px;" id="box">
+    <div style="font-size: .7rem;padding: 10px;color:white;align-self: center;" id="output"></div></div>
     <div style="margin-left: 60px; margin-bottom: 10px" id="webgoeshere"></div>
+  </form>
     <script src="script.js"></script>
   </head>
  
